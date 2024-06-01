@@ -1108,7 +1108,7 @@ typedef CameraModel_<CameraType::SkewPinhole, double> SkewPinholeModel;
 template <typename Float, CameraType C, DistorType D = DistorType::None>
 struct Camera_: CameraModel_<C, Float>, DistorModel_<D, Float> {
     static_assert(std::is_floating_point<Float>::value,
-        "struct Camera can only be instantiated with float point type.");
+        "Struct Camera_ Can Only Be Instantiated With Float Point Type.");
     typedef CameraModel_<C, Float> CameraBase;
     typedef DistorModel_<D, Float> DistorBase;
     Camera_() : CameraBase(), DistorBase(), width(0), height(0) {}
